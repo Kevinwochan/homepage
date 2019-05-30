@@ -1,26 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>New Tab</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+
 </head>
+
 <body>
     <div id="search">
         <input id="search-field" type="text" name="search-field"/>
+        <svg viewBox="0 0 1920 250" xmlns="http://www.w3.org/2000/svg" id="waveform-collage">
+            <path id="waveform-1"
+                  d="M1920 250H0V0s126.707 78.536 349.975 80.05c177.852 1.203 362.805-63.874 553.803-63.874 290.517 0 383.458 57.712 603.992 61.408 220.527 3.696 278.059-61.408 412.23-17.239">
+            </path>
+            <path id="waveform-2"
+                  d="M1920 144s-467.917 116.857-1027.243-17.294C369.986 1.322 0 45.578 0 45.578V250h1920V144z">
+            </path>
+            <path id="waveform-3"
+                  d="M0 195.553s208.547-75.581 701.325-20.768c376.707 41.908 520.834-67.962 722.545-67.962 222.926 0 311.553 83.523 496.129 86.394V250H0v-54.447z"</path>
+        </svg>
     </div>
-    <div class="container">
+    <div class="container-fluid min-vh-100 d-flex flex-column align-items-center justify-content-center p-0">
         <div id="clock"></div>
-
         <div id="weather-container">
             <span id="weather">Loading ... </span>
             <img id="weather-icon" src="">
         </div>
-        <div class="bookmark-container">
-            <div class="bookmark-set">
+        <div class="bookmark-container my-3 d-flex flex-row justify-content-center">
+            <div class="bookmark-set mx-3 col-3 p-3">
                 <div class="bookmark-title">Daily</div>
                 <div class="bookmark-inner-container">
                     <a class="bookmark" href="https://inbox.google.com/" target="_blank">Inbox</a>
@@ -29,21 +43,21 @@
                     <a class="bookmark" href="https://trello.com/b/gIeUdih7/personal" target="_blank">Trello</a>
                 </div>
             </div>
-            <div class="bookmark-set">
+            <div class="bookmark-set mx-3 col-3 p-3">
                 <div class="bookmark-title"> Media </div>
                 <div class="bookmark-inner-container">
                     <a class="bookmark" href="https://fmovies.to" target="_blank">FMovies</a>
                     <a class="bookmark" href="https://youtube.com" target="_blank">Youtube</a>
                 </div>
             </div>
-            <div class="bookmark-set">
+            <div class="bookmark-set mx-3 col-3 p-3">
                 <div class="bookmark-title">News</div>
                 <div class="bookmark-inner-container">
                     <a class="bookmark" href="https://reddit.com/r/worldnews" target="_blank">/r/worldnews</a>
                     <a class="bookmark" href="https://news.google.com" target="_blank">Google News</a>
                 </div>
             </div>
-            <div class="bookmark-set">
+            <div class="bookmark-set mx-3 col-3 p-3">
                 <div class="bookmark-title">Social</div>
                 <div class="bookmark-inner-container">
                     <a class="bookmark" href="https://messages.google.com/web/conversations" target="_blank">Text Messages</a>
@@ -60,10 +74,10 @@
                   d="M1920 144s-467.917 116.857-1027.243-17.294C369.986 1.322 0 45.578 0 45.578V250h1920V144z">
             </path>
             <path id="waveform-3"
-                  d="M0 195.553s208.547-75.581 701.325-20.768c376.707 41.908 520.834-67.962 722.545-67.962 222.926 0 311.553 83.523 496.129 86.394V250H0v-54.447z"</path>
+                  d="M0 195.553s208.547-75.581 701.325-20.768c376.707 41.908 520.834-67.962 722.545-67.962 222.926 0 311.553 83.523 496.129 86.394V250H0v-54.447z"></path>
         </svg>
-
     </div>
     <script src="app.js"></script>
 </body>
+
 </html>

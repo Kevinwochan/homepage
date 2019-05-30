@@ -1,21 +1,7 @@
-html {
-    font-family: 'Source Sans Pro';
-    font-size: 25px;
-    background-color: rgb(36, 41, 51);
-}
-
-body {
-    margin: 0px;
+html, body {
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 20px;
-}
-
-.container {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    background-color: rgb(36, 41, 51);
 }
 
 #clock {
@@ -25,19 +11,10 @@ body {
     text-shadow: 0px 3px 6px rgba(15, 17, 21, 0.2) ;
 }
 
-#weather-container:after{
-    content: "";
-    display: block;
-    height: 1px;
-    background-color: rgba(216, 222, 233, 0.5);
-    width: 60%;
-    margin: 0.25rem auto 0 auto;
-}
-
 #search {
     width: 100%;
     height: 100vh;
-    background-color: #2E3440;
+    background-color: rgb(36, 41, 51);
     display: none;
     margin: 0;
     position: absolute;
@@ -45,6 +22,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 1;
 }
 
 #search-field {
@@ -56,7 +34,7 @@ body {
     border-radius: 3px;
     margin-bottom: 1em;
     text-align: center;
-    color: #81A1C1;
+    color: #D8DEE9;
 }
 
 #weather-icon {
@@ -83,46 +61,14 @@ body {
     box-shadow: rgba(15, 17, 21, 0.2) 0px 10px 20px 2px;
 }
 
-.inline {
-    display: inline-block;
-}
-
 .bookmark-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 50%;
-    margin: 1em 0em;
-}
-
-@media only screen and (max-width: 960px) {
-    .container {
-        height: auto;
-    }
-    #clock {
-        margin-top: 1em;
-    }
-    .container > .bookmark-container {
-        flex-direction: column;
-        width: 60%;
-    }
-    .bookmark-container > .bookmark-set {
-        width: auto;
-        margin: 1em 0em;
-    }
-    .weather-container {
-        width: 30%;
-    }
 }
 
 .bookmark-set{
     transition: box-shadow 400ms ease-in-out 0s;
     box-shadow: rgba(15, 17, 21, 0.2) 0px 3px 6px 0px;
-    padding: 1rem;
     background-color: #3B4252;
     border-radius: 5px;
-    margin: 0em .75em;
-    width: 50%;
 }
 
 .bookmark-set:hover{
@@ -157,8 +103,8 @@ body {
 
 #waveform-collage{
     position:fixed;
-    bottom:0;
-    z-index: -1;
+    bottom: 0;
+    z-index: 0;
 }
 #waveform-1{
     fill: #434C5E;

@@ -1,0 +1,31 @@
+{
+  "name": "homepage",
+  "version": "1.0.0",
+  "description": "A Material dashboard google chrome extension",
+  "main": "app.js",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "del": "^4.1.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-uglify": "^3.0.2",
+    "hack-font": "^3.3.0",
+    "merge-stream": "^2.0.0",
+    "nord": "^0.2.1"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
+  "scripts": {
+    "test": "gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kevinwochan/homepage.git"
+  },
+  "author": "Kevin Chan (Kevinwochan)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kevinwochan/homepage/issues"
+  },
+  "homepage": "https://github.com/Kevinwochan/homepage#readme"
+}
