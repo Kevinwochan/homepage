@@ -27,46 +27,46 @@ App = {
     if (dayNight == "d"){
       switch (code){
         case "01":
-          return "icons/sunny.png";
+          return "images/sunny.png";
         case "02":
-          return "icons/partly_cloudy.png";
+          return "images/partly_cloudy.png";
         case "03":
-          return "icons/cloudy.png";
+          return "images/cloudy.png";
         case "04":
-          return "icons/cloud_s_sunny.png";
+          return "images/cloud_s_sunny.png";
         case "09":
-          return "icons/rain_s_cloudy.png";
+          return "images/rain_s_cloudy.png";
         case "10":
-          return "icons/rain.png";
+          return "images/rain.png";
         case "11":
-          return "icons/thunderstorms.png";
+          return "images/thunderstorms.png";
         case "13":
-          return "icons/snow.png";
+          return "images/snow.png";
         case "50":
-          return "icons/mist.png";
+          return "images/mist.png";
         default:
           return null;
       }
     } else {
       switch (code){
         case "01":
-          return "icons/night.png";
+          return "images/night.png";
         case "02":
-          return "icons/night_partly_cloudy.png";
+          return "images/night_partly_cloudy.png";
         case "03":
-          return "icons/cloudy.png";
+          return "images/cloudy.png";
         case "04":
-          return "icons/cloudy_night.png";
+          return "images/cloudy_night.png";
         case "09":
-          return "icons/rain_night.png";
+          return "images/rain_night.png";
         case "10":
-          return "icons/rain.png";
+          return "images/rain.png";
         case "11":
-          return "icons/thunderstorms.png";
+          return "images/thunderstorms.png";
         case "13":
-          return "icons/night_snow.png";
+          return "images/night_snow.png";
         case "50":
-          return "icons/mist.png";
+          return "images/mist.png";
         default:
           return null;
       }
@@ -74,13 +74,13 @@ App = {
   },
 
   getWeather: function(){
-    let xhr = new XMLHttpRequest();
+    var xhr = new XMLHttpRequest();
     /* OPEN WEATHER MAP */
     xhr.open('GET', 'https://api.openweathermap.org/data/2.5/weather?id=2147714&appid=9900eab5f0e2073723150704ad97acb2&units=metric');
-    xhr.onload = () => {
+    xhr.onload = function() {
       if (xhr.readyState === 4) {
         if (xhr.status === 200) {
-          let json = JSON.parse(xhr.responseText);
+          var json = JSON.parse(xhr.responseText);
           var temp = json.main.temp.toFixed(0) + "&deg;C";
           var weatherDescription = json.weather[0].description;
           var weatherIcon = App.getWeatherIcon(json.weather[0].icon);
@@ -101,7 +101,7 @@ App = {
     //xhr.onload = () => {
     //  if (xhr.readyState === 4) {
     //    if (xhr.status === 200) {
-    //      let json = JSON.parse(xhr.responseText);
+    //      var json = JSON.parse(xhr.responseText);
     //      //var temp = json.main.temp.toFixed(0) + "&deg;C";
     //    } else {
     //      console.log('error msg: ' + xhr.status);
@@ -113,7 +113,7 @@ App = {
   init: function(){
     /* CLOCK */
     document.getElementById("clock").innerHTML = App.getTime();
-    setInterval(() => {
+    setInterval(function() {
       document.getElementById("clock").innerHTML = App.getTime();
     }, 30000);
 
@@ -123,12 +123,12 @@ App = {
     /* EVENT LISTENERS */
     // search when th enter key is pressed
     var searchField = document.getElementById("search-field");
-    searchField.addEventListener("keypress", (event) => {
+    searchField.addEventListener("keypress", function(event){
       return App.search(event);
     });
 
     // search field shorcut
-    document.addEventListener("keydown", event => {
+    document.addEventListener("keydown", function(event) {
       if (event.keyCode == 32) {          // Spacebar code to open search
         document.getElementById('search').style.display = 'flex';
         document.getElementById('search-field').focus();

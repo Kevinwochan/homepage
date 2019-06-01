@@ -1,5 +1,5 @@
 {
-	"version"     : "2.1",
+	"version"     : "2.3.1",
 	"name"        : "Material Homepage",
 	"description" : "A material styled homepage, aesthetic simplicity.",
 
@@ -7,13 +7,12 @@
 	"chrome_url_overrides": {
 		"newtab" : "./dashboard.html"
 	},
-	"content_scripts": [{
-		"matches": ["*://*/_/chrome/newtab*"],
-		"run_at" : "document_end",
-		"js" : ["app.js"]
-	}],
 	"web_accessible_resources": [
-		"icons/*.png"
+		"js/app.min.js",
+		"images/*.png",
+		"css/styles.min.css",
+		"venodor/*/*",
+		"fonts/*.ttf"
 	],
 	"manifest_version" : 2
 }

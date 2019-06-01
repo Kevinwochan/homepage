@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Source Sans Pro';
-    src: url("./fonts/SourceSansPro-Regular.tff" format('truetype'));
+    src: url("../fonts/SourceSansPro-Regular.tff");
 }
 
 html{
@@ -10,7 +10,7 @@ html{
 body{
     font-family: 'Source Sans Pro', sans-serif;
     background-color: rgb(36, 41, 51);
-    background-image: url(background.svg);
+    background-image: url(../images/background.svg);
     background-repeat: no-repeat;
     background-position: bottom;
 }
@@ -55,8 +55,8 @@ body{
 }
 
 #weather-icon {
-    height: 30px;
-    vertical-align: text-bottom;
+    height: 35px;
+    vertical-align: bottom;
 }
 
 #weather-container{
@@ -99,18 +99,4 @@ body{
 .bookmark:hover {
     color: #88C0D0;
     transition: all 400ms ease-in-out 0s;
-}
-
-#waveform-collage{
-    position:fixed;
-    bottom: 0;
-}
-#waveform-1{
-    fill: #434C5E;
-}
-#waveform-2{
-    fill: #3B4252;
-}
-#waveform-3{
-    fill: #2E3440;
 }
